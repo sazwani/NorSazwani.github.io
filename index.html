@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type"text/css" href="home.css"/>
+<title>website homepage</title>
+<style>
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    background:gray;
+}
+nav{
+   background:#594848;
+   width:100%;
+   overflow:auto;
+}
+ul{
+   margin:0;
+   padding:0;
+   list-style:none;
+}
+li{
+   float:right;
+}
+nav a{
+    width:120px;
+    display:block;
+    text-decoration:none;
+    text-align:center;
+    background:#594848;
+    font-size:17px;
+    color:white;
+    padding:20px 10px;
+    font-family:Arial;
+}
+nav a:hover{
+    background:pink;
+    color:black;
+}
+
+<style>
+.styling{
+background-color:black;
+color:pink;
+font: bold 18px MS Sans Serif;
+padding: 8px;
+}
+
+</style> 
+</head>
+<body>
+    <header>
+        <h1><marquee>HELLO EVERYONE :) HAVE A NICE DAY</marquee></h1>
+    </header>
+<nav>
+    <ul>
+        <li><a href="contact.html"> Contact</a></li>
+        <li><a href="gallery.html"> Gallery</a></li>
+        <li><a href="family.html"> Family</a></li> 
+        <li><a href="education.html"> Education</a></li>
+        <li><a href="aboutme.html"> About Me</a></li>
+        <li><a href="index.html"> Home</a></li>
+
+    </ul>
+</nav>
+
+
+<div style="text-align:center">
+   <h2>HELLO I'M SAZWANI :)</h2>
+   <h2>Welcome To My Personal Website</h2>
+
+<span id="digitalclock" class="styling"></span>
+
+<script>
+var alternate=0
+
+function show(){
+var clockobj=document.getElementById? document.getElementById("digitalclock") : document.all.digitalclock
+var Digital=new Date()
+var hours=Digital.getHours()
+var minutes=Digital.getMinutes()
+var dn="AM"
+
+if (hours==12) dn="PM" 
+if (hours>12){
+dn="PM"
+hours=hours-12
+}
+if (hours==0) hours=12
+if (hours.toString().length==1)
+hours="0"+hours
+if (minutes<=9)
+minutes="0"+minutes
+
+if (alternate==0)
+clockobj.innerHTML=hours+"<font color='black'> : </font>"+minutes+" "+"<sup>"+dn+"</sup>"
+else
+clockobj.innerHTML=hours+"<font color='black'> : </font>"+minutes+" "+"<sup>"+dn+"</sup>"
+alternate=(alternate==0)? 1 : 0
+setTimeout("show()",1000)
+}
+window.onload=show
+
+</script>
+<br>
+
+<img src="resume.jpeg" alt="Human" width="300" height="300">
+
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/774383/t/2"></script>
+<embed src="audio/kalimbacover.mp3" loop="true" autostart="true" width="2" height="0">
+</embed>
+</body>
+</html>
